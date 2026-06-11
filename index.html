@@ -26,20 +26,23 @@
 
   html, body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     background: #000000;
     font-family: 'Calibri', 'Carlito', 'Trebuchet MS', Arial, sans-serif;
     color: var(--white);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .canvas {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .bg-layer {
@@ -60,11 +63,12 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: clamp(0.8rem, 3vh, 1.5rem) clamp(0.8rem, 3vw, 1.5rem);
     gap: clamp(0.6rem, 2vh, 1rem);
+    padding-bottom: 1.5rem;
   }
 
   .progress-bar-wrap {
@@ -86,20 +90,19 @@
   }
 
   .carousel-stage {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 0;
     gap: 0;
+    width: 100%;
   }
 
   .video-card {
     flex: 1;
     max-width: min(960px, 95vw);
-    height: 100%;
-    max-height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     border: none;
